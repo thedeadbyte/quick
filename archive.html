@@ -4,7 +4,7 @@ title: Archive
 ---
 
 <section id="posts">
-  <input class="search_box" id="search" type="text" placeholder="Search for article...">
+  <!-- <input class="search_box" id="search" type="text" placeholder="Search for article..."> -->
   <ul class="posts_by_years">
     {% assign posts_by_years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
     {% for year in posts_by_years %}
