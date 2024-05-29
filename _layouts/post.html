@@ -4,12 +4,12 @@ layout: default
 
 <div class="post_container">
   <div class="post_header">
-    <h1><a href="{{ page.url }}" class="title b_link">{% if page.icon %}<img class="icon" src="/assets/icons/{{ page.icon }}"> {% endif %}{{ page.title }}</a></h1>
+    <h1><a href="{{ site.base_url }}/{{ page.url }}" class="title b_link">{% if page.icon %}<img class="icon" src="{{ site.base_url }}/assets/icons/{{ page.icon }}"> {% endif %}{{ page.title }}</a></h1>
     <div class="post_info">
       <time datetime="{{ page.date | date_to_string }}">{{ page.date | date_to_string }}</time>
       <ul class="post_tags">
         {% for tag in page.tags %}
-        <li class="post_tag"><a href="/tags/#{{ tag }}">{{ tag }}</a></li>
+        <li class="post_tag"><a href="{{ site.base_url }}/tags/#{{ tag }}">{{ tag }}</a></li>
         {% endfor %}
       </ul>
     </div>

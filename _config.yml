@@ -1,7 +1,7 @@
 # --- Site Info ---
 title: 'Quick Theme'
 description: 'Quick is a fast and responsive Jekyll theme.'
-base_url: ''
+base_url: '/quick'
 
 
 # --- Author Info ---
