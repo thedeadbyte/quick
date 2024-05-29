@@ -1,0 +1,25 @@
+---
+layout: page
+title: Tags
+---
+
+<section id="tags">
+  <ul class="tags_list">
+    {% assign tags = site.tags | sort %}
+    {% for tag in tags %}
+    {% assign tag_name = tag[0] %}
+    <li class="tag_posts" id="{{ tag_name }}">
+      <h2><a href="/tags/#{{ tag_name }}" class="tag_name">{{ tag_name }}</a></h2>
+      <ul class="posts_list_sm">
+        {% for post in tag[1] %}
+        <li class="post_preview_sm">
+          <time datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time>{% if post.icon %}<img class="icon" src="/assets/icons/{{ post.icon }}"> {% endif %}<a class="title" href="{{ post.url }}">{{ post.title }}</a>
+          <div class="separator"></div>
+          <a href="/about">@{{ site.author.username }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

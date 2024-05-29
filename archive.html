@@ -1,0 +1,29 @@
+---
+layout: page
+title: Archive
+---
+
+<section id="posts">
+  <input class="search_box" id="search" type="text" placeholder="Search for article...">
+  <ul class="posts_by_years">
+    {% assign posts_by_years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+    {% for year in posts_by_years %}
+    <li class="posts_year">
+      <h2 id="{{ year.name }}"><a href="#{{ year.name }}">{{ year.name }}</a></h2>
+      <ul class="posts_list_sm">
+      {% for post in year.items %}
+        <li class="post_preview_sm">
+          <time datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time>{% if post.icon %}<img class="icon" src="/assets/icons/{{ post.icon }}"> {% endif %}<a class="title" href="{{ post.url }}">{{ post.title }}</a>
+          <div class="separator"></div>
+          <ul class="post_tags">
+            {% for tag in post.tags %}
+            <li class="post_tag"><a href="/tags/#{{ tag }}">{{ tag }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% endfor %}
+      </ul>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

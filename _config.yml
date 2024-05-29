@@ -1,0 +1,79 @@
+# --- Site Info ---
+title: 'Quick Theme'
+description: 'Quick is a fast and responsive Jekyll theme.'
+base_url: ''
+
+
+# --- Author Info ---
+author:
+  name: Ricardo Costa
+  username: astreuw
+  email: thedeadbyte at protonmail dot com
+  avatar: https://avatars.githubusercontent.com/u/100010099
+  links:
+    twitter: https://x.com/astreuw
+    linkedin: https://linkedin.com/in/thedeadbyte
+    youtube: https://youtube.com/@empoucosbits
+  projects:
+    - title: 'PwnTTY'
+      description: Pwntty is a toolkit written in Python to control TTY devices. The goal of this project is to be used to control and play with other players terminals in real-time CTFs like KoTH, Battleground (HTB), etc.
+      url: https://github.com/astreuw/pwntty
+      icon: fa-brands fa-github
+      badges: [https://img.shields.io/github/stars/astreuw/pwntty, https://img.shields.io/github/forks/astreuw/pwntty]
+
+    - title: 'Em Poucos Bits'
+      description: My primary YouTube channel focused mainly on teaching about computing internals, malware and low-level programming in an easy way (portuguese only).
+      url: https://youtube.com/@empoucosbits
+      icon: fa-brands fa-youtube
+      badges: [https://img.shields.io/youtube/channel/subscribers/UCoggko8tAqS5KrdWNerDqGQ]
+    
+    - title: 'astreuw'
+      description: My secondary channel where I post things I learned and proofs of concept without much effort or fancy edits.
+      url: https://youtube.com/@astreuw
+      icon: fa-brands fa-youtube
+      badges: [https://img.shields.io/youtube/channel/subscribers/UCBUfoN0EEA2NFzrQr5ujREQ]
+
+
+# --- Site Navigation ---
+navbar_links:
+  - title: Home
+    url: /
+#    icon: fa-solid fa-house # (optional)
+
+  - title: About
+    url: /about/
+  
+  - title: Archive
+    url: /archive/
+  
+  - title: Tags
+    url: /tags/
+
+footer_links:
+  - title:
+    url: https://x.com/astreuw
+    icon: fa-brands fa-twitter
+  
+  - title:
+    url: https://youtube.com/@empoucosbits
+    icon: fa-brands fa-youtube
+  
+  - title:
+    url: https://linkedin.com/in/thedeadbyte
+    icon: fa-brands fa-linkedin
+
+
+# --- Site Settings ---
+paginate: 7
+paginate_path: "/:num"
+
+collections:
+  posts:
+    output: true
+    permalink: "/post/:title"
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap

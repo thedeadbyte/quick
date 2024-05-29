@@ -1,0 +1,22 @@
+---
+layout: page
+title: About
+permalink: /about/
+---
+
+<div class="about">
+  <img class="author_avatar" src="{{ site.author.avatar }}">
+  <p>{{ site.description }}</p>
+</div>
+
+<section id="projects">
+  <p class="title_hr"><span>Projects</span></p>
+  <ul class="projects_list">
+    {% for project in site.author.projects %}
+    <li class="project_preview">
+      <h3 class="project_title"><a class="title b_link" href="{{ project.url }}">{{ project.title }}{% if project.icon %}<i class="{{ project.icon }}"></i>{% endif %}</a></h3>
+      <p class="project_description">{{ project.description }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

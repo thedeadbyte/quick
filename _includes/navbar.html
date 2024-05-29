@@ -1,0 +1,9 @@
+<nav class="site_navbar">
+  <h3 class="site_title"><a href="/" class="b_link">{{ site.title }}</a></h3>
+  <div class="separator"></div>
+  <ul class="navbar_links">
+    {% for link in site.navbar_links %}
+    <li class="navbar_link"><a href="{{ link.url }}" {% if link.url == page.url %}class="current"{% endif %}>{{ link.title }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>

@@ -1,0 +1,7 @@
+<nav class="site_footer_nav">
+  <ul class="footer_links">
+    {% for link in site.footer_links %}
+    <li class="footer_link"><a class="b_link" href="{{ link.url }}" target="_blank">{% if link.icon %}<i class="{{ link.icon }}"></i>{% endif %}{{ link.title }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
